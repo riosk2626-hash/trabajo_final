@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Commit Tecnología</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor header-contenido">
+            <div class="logo">
+                COMMIT <span>TECNOLOGÍA</span>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="soluciones.html">Soluciones</a>
+                <a href="tecnologia.html">Tecnología</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="titulo-pagina">
+            <div class="contenedor">
+                <h1>Contacto</h1>
+                <p>Cuéntanos qué necesita tu empresa y te responderemos pronto.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+
+                <form id="formulario" class="formulario">
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre">
+
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" placeholder="Nombre de tu empresa">
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="text" id="correo" placeholder="correo@ejemplo.com">
+
+                    <label for="solucion">Solución de interés</label>
+                    <select id="solucion">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Gestión de inventarios">Gestión de inventarios</option>
+                        <option value="Control de producción">Control de producción</option>
+                        <option value="Control de consumos">Control de consumos</option>
+                        <option value="Gestión logística">Gestión logística</option>
+                        <option value="Mantenimiento industrial">Mantenimiento industrial</option>
+                        <option value="Reportes e indicadores">Reportes e indicadores</option>
+                    </select>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+
+                    <p id="mensaje-error" class="error"></p>
+
+                    <button type="submit" class="boton">Enviar solicitud</button>
+                </form>
+
+                <!-- Aquí se muestran los datos guardados en sessionStorage -->
+                <div id="resumen" class="resumen"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>COMMIT TECNOLOGÍA</p>
+        <p>Conectamos tecnología con eficiencia industrial.</p>
+        <p>© 2026 Commit Tecnología - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>

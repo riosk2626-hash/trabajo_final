@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones | Commit Tecnología</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor header-contenido">
+            <div class="logo">
+                COMMIT <span>TECNOLOGÍA</span>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="soluciones.html">Soluciones</a>
+                <a href="tecnologia.html">Tecnología</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="titulo-pagina">
+            <div class="contenedor">
+                <h1>Soluciones</h1>
+                <p>Herramientas de software para controlar y optimizar tu industria.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+
+                <!-- Botones de filtro -->
+                <div class="filtros">
+                    <button class="boton" onclick="mostrarSoluciones('todas')">Todas</button>
+                    <button class="boton" onclick="mostrarSoluciones('inventario')">Inventario</button>
+                    <button class="boton" onclick="mostrarSoluciones('produccion')">Producción</button>
+                    <button class="boton" onclick="mostrarSoluciones('recursos')">Recursos</button>
+                    <button class="boton" onclick="mostrarSoluciones('logistica')">Logística</button>
+                </div>
+
+                <!-- Aquí JavaScript crea las tarjetas -->
+                <div class="tarjetas" id="catalogo"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>COMMIT TECNOLOGÍA</p>
+        <p>Conectamos tecnología con eficiencia industrial.</p>
+        <p>© 2026 Commit Tecnología - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/soluciones.js"></script>
+</body>
+</html>

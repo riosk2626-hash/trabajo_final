@@ -1,0 +1,439 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3F6FA;
+    color: #101D32;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #101D32;
+    color: white;
+    padding: 18px 0;
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #35A7E8;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #35A7E8;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #101D32;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+
+    .header-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    background: linear-gradient(
+        rgba(16, 29, 50, 0.85),
+        rgba(16, 29, 50, 0.85)
+    ),
+    url("../img/portada.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-contenido {
+    max-width: 700px;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 22px;
+    background-color: #1769AA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #35A7E8;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.boton-secundario:hover {
+    background-color: white;
+    color: #101D32;
+}
+
+/* AJUSTES PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+/* SECCIÓN DE SOLUCIONES */
+
+.soluciones {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.soluciones h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.soluciones-descripcion {
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #1769AA;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.tarjeta a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #1769AA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    color: #35A7E8;
+}
+
+
+/* SECCIÓN DE BENEFICIOS */
+
+.beneficios {
+    background-color: #E8EFF7;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.beneficios-descripcion {
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.beneficios-lista {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.beneficio {
+    width: 250px;
+    padding: 20px;
+}
+
+.beneficio h3 {
+    color: #1769AA;
+    margin-bottom: 12px;
+}
+
+.beneficio p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* SECCIÓN DE CONTACTO */
+
+.contacto-inicio {
+    background-color: #101D32;
+    color: white;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.contacto-inicio h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contacto-inicio p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+    color: #D5DFEA;
+}
+
+/* ===== ESTILOS PARA LAS DEMÁS PÁGINAS (agregar al final de estilos.css) ===== */
+
+/* Título de cada página interna */
+.titulo-pagina {
+    background-color: #101D32;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.titulo-pagina h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.titulo-pagina p {
+    color: #D5DFEA;
+    line-height: 1.6;
+}
+
+/* Sección general */
+.seccion {
+    padding: 60px 0;
+}
+
+.texto-centrado {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Botón dentro de las tarjetas */
+button.boton {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.tarjeta .boton {
+    margin-top: 18px;
+    color: white;
+}
+
+/* Botones de filtro */
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.formulario label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 6px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd6e2;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #35A7E8;
+}
+
+.formulario .boton {
+    margin-top: 20px;
+}
+
+.error {
+    color: #c0392b;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* Resumen con datos de sessionStorage */
+.resumen {
+    max-width: 600px;
+    margin: 25px auto 0;
+}
+
+.resumen h3 {
+    color: #1769AA;
+    margin-bottom: 10px;
+}
+
+.resumen p {
+    line-height: 1.8;
+}
+
+.saludo {
+    text-align: center;
+    color: #1769AA;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .titulo-pagina h1 {
+        font-size: 28px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
