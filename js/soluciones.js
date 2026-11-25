@@ -1,6 +1,4 @@
 // CATÁLOGO DE SOLUCIONES
-
-// Arreglo de objetos: cada objeto es una solución
 var soluciones = [
     { nombre: "Gestión de inventarios", categoria: "inventario",
       descripcion: "Control de materias primas, herramientas y repuestos en tiempo real." },
@@ -18,9 +16,30 @@ var soluciones = [
       descripcion: "Organización de pedidos, despachos y movimientos de productos." }
 ];
 
+var categorias = [
+    { valor: "todas", texto: "Todas" },
+    { valor: "inventario", texto: "Inventario" },
+    { valor: "produccion", texto: "Producción" },
+    { valor: "recursos", texto: "Recursos" },
+    { valor: "logistica", texto: "Logística" }
+];
+
+var filtros = document.getElementById("filtros");
 var catalogo = document.getElementById("catalogo");
 
-// Muestra las tarjetas; si la categoría es "todas" muestra todo
+function mostrarFiltros() {
+    filtros.innerHTML = "";
+
+    for (var i = 0; i < categorias.length; i++) {
+        var c = categorias[i];
+
+        filtros.innerHTML +=
+            '<button class="boton" onclick="mostrarSoluciones(\'' + c.valor + '\')">' +
+            c.texto +
+            '</button>';
+    }
+}
+
 function mostrarSoluciones(categoria) {
     catalogo.innerHTML = "";
 
@@ -38,11 +57,10 @@ function mostrarSoluciones(categoria) {
     }
 }
 
-// Guarda la solución elegida y va a la página de contacto
 function solicitar(posicion) {
     sessionStorage.setItem("solucion", soluciones[posicion].nombre);
     window.location.href = "contacto.html";
 }
 
-// Al cargar la página se muestran todas
+mostrarFiltros();
 mostrarSoluciones("todas");

@@ -10,7 +10,6 @@
 
 <body>
 
-    <!-- ENCABEZADO -->
     <header>
         <div class="contenedor header-contenido">
             <div class="logo">
@@ -27,8 +26,6 @@
     </header>
 
     <main>
-
-        <!-- TÍTULO DE LA PÁGINA -->
         <section class="titulo-pagina">
             <div class="contenedor">
                 <h1>Soluciones</h1>
@@ -37,26 +34,19 @@
         </section>
 
         <section class="seccion">
-            <div class="contenedor">
+                <section class="seccion">
+                    <div class="contenedor">
 
-                <!-- Botones de filtro -->
-                <div class="filtros">
-                    <button class="boton" onclick="mostrarSoluciones('todas')">Todas</button>
-                    <button class="boton" onclick="mostrarSoluciones('inventario')">Inventario</button>
-                    <button class="boton" onclick="mostrarSoluciones('produccion')">Producción</button>
-                    <button class="boton" onclick="mostrarSoluciones('recursos')">Recursos</button>
-                    <button class="boton" onclick="mostrarSoluciones('logistica')">Logística</button>
-                </div>
+                        <div class="filtros" id="filtros"></div>
 
-                <!-- Aquí JavaScript crea las tarjetas -->
-                <div class="tarjetas" id="catalogo"></div>
+                        <div class="tarjetas" id="catalogo"></div>
 
-            </div>
+                    </div>
+                </section>
+                <div class="filtros" id="filtros"></div>
         </section>
-
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
         <p>COMMIT TECNOLOGÍA</p>
         <p>Conectamos tecnología con eficiencia industrial.</p>
