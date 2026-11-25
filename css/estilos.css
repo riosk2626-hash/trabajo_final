@@ -106,9 +106,72 @@ footer p {
     color: white;
 }
 
-.hero-contenido {
-    max-width: 700px;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
     padding: 60px 0;
+}
+
+.hero-contenido {
+    max-width: 600px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #35A7E8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero {
+    background:
+        linear-gradient(135deg, rgba(16, 29, 50, 0.95), rgba(23, 105, 170, 0.8)),
+        url("../img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Panel decorativo */
+.hero-panel {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.hero-panel h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #35A7E8;
+}
+
+.panel-fila {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.barra {
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+.barra div {
+    background-color: #35A7E8;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 }
 
 .hero h1 {
@@ -127,6 +190,32 @@ footer p {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+/* FRANJA DE NÚMEROS */
+.cifras {
+    background-color: white;
+    padding: 35px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cifras-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.cifra strong {
+    display: block;
+    font-size: 34px;
+    color: #1769AA;
+    font-weight: 800;
+}
+
+.cifra span {
+    font-size: 14px;
+    color: #555;
 }
 
 .boton {
@@ -281,8 +370,7 @@ footer p {
 /* SECCIÓN DE CONTACTO */
 
 .contacto-inicio {
-    background-color: #101D32;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 65px 20px;
     text-align: center;
 }
@@ -296,7 +384,7 @@ footer p {
     max-width: 650px;
     margin: 0 auto 25px;
     line-height: 1.6;
-    color: #D5DFEA;
+    color: hsl(0, 0%, 0%);
 }
 
 /* ===== ESTILOS PARA LAS DEMÁS PÁGINAS (agregar al final de estilos.css) ===== */
@@ -437,3 +525,37 @@ button.boton {
         padding: 20px;
     }
 }
+
+/* TABLET */
+@media (max-width: 992px) {
+    .tarjeta {
+        width: 45%;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .tarjeta,
+    .beneficio {
+        width: 100%;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones .boton {
+        text-align: center;
+    }
+
+    .soluciones,
+    .beneficios,
+    .seccion {
+        padding: 45px 0;
+    }
+
+    .filtros .boton {
+        flex: 1 1 40%;
+    }
+}
+
